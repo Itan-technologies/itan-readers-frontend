@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <>
-<div className="flex items-center justify-between fixed top-0 left-0 w-full  py-2 shadow-md z-10">
+<div className="flex items-center justify-between fixed top-0 left-0 w-full  py-2 shadow-md z-10 bg-white">
     <div></div> 
     <div className="flex space-x-8 mr-8"> 
     <div
