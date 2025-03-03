@@ -36,7 +36,7 @@ const signIn = () => {
         <div className='bg-white rounded-2xl p-10 mr-7 my-5'>
             <div className=''>
             <p className='text-2xl font-bold '>Welcome!</p>
-            <p className='text-sm mb-4'>Don’t have an account? <Link href="/users/sign_up"><span className='font-bold text-lg cursor-pointer'>Create One</span></Link></p>
+            <p className='text-sm mb-4'>Don’t have an account? <Link href="/users/sign_up" className='font-bold cursor-pointer hover:text-blue-700'><span>Create One</span></Link></p>
             </div>
 
         <div className='mt-4'>
