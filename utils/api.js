@@ -51,3 +51,16 @@ export const signOutAuthor = async () => {
       throw error;
     }
 };
+
+// Sign in an admin
+export const signInAdmin = async (email, password) => {
+    try {
+      const response = await api.post("/admins/sign_in", {
+        admin: { email, password },
+      });
+      return response.data;
+    } catch (error) {
+      console.error("Admin sign-in failed:", error.response?.data || error);
+      throw error;
+    }
+};
