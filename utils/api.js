@@ -40,3 +40,14 @@ export const signInAuthor = async (email, password) => {
       throw error;
     }
   };
+
+// Sign out an author
+export const signOutAuthor = async () => {
+    try {
+      await api.delete("/authors/sign_out");
+      return { success: true };
+    } catch (error) {
+      console.error("Sign-out failed:", error.response?.data || error);
+      throw error;
+    }
+};
