@@ -27,3 +27,16 @@ export const registerAuthor = async (email, password) => {
         };
     }
 };
+
+// Sign in an author
+export const signInAuthor = async (email, password) => {
+    try {
+      const response = await api.post("/authors/sign_in", {
+        author: { email, password },
+      });
+      return response.data;
+    } catch (error) {
+      console.error("Sign-in failed:", error.response?.data || error);
+      throw error;
+    }
+  };
