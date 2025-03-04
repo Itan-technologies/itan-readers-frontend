@@ -64,3 +64,14 @@ export const signInAdmin = async (email, password) => {
       throw error;
     }
 };
+
+// Sign out an admin
+export const signOutAdmin = async () => {
+    try {
+      await api.delete("/admins/sign_out");
+      return { success: true };
+    } catch (error) {
+      console.error("Admin sign-out failed:", error.response?.data || error);
+      throw error;
+    }
+};
