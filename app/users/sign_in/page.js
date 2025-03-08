@@ -21,7 +21,7 @@ const SignIn = () => {
     try {
       await signInAuthor(email, password);
       setMessage("Login successful! Redirecting...");
-      router.push("/dashboard"); // Adjust this path as needed
+      router.push("/dashboard/authors/:authorId"); // Adjust this path as needed
     } catch (error) {
       setMessage(error.response?.data?.message || "Login failed. Try again.");
     } finally {
