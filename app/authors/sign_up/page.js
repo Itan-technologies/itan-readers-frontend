@@ -55,7 +55,7 @@ const signUp = () => {
         <div className='bg-white rounded-2xl p-10 mr-7 my-5'>
             <div className=''>
             <p className='text-2xl font-bold '>Welcome!</p>
-            <p className='text-sm mb-4'>Already have an account? <Link href="/users/sign_in" className='font-bold cursor-pointer hover:text-blue-700'><span>Log In</span> </Link></p>
+            <p className='text-sm mb-4'>Already have an account? <Link href="/authors/sign_in" className='font-bold cursor-pointer hover:text-blue-700'><span>Log In</span> </Link></p>
             </div>
      <form onSubmit={handleSignup}>
      <div className=''>

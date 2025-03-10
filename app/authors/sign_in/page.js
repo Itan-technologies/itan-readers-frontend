@@ -23,7 +23,7 @@ const SignIn = () => {
       setMessage("Login successful! Redirecting...");
       router.push("/dashboard/authors/:authorId"); // Adjust this path as needed
     } catch (error) {
-      setMessage(error.response?.data?.message || "Login failed. Try again.");
+      setMessage(error.response?.data?.message || "Invalid Email or password.");
     } finally {
       setLoading(false);
     }
@@ -87,7 +87,7 @@ const SignIn = () => {
           <p className="text-sm mb-4">
             Don’t have an account?{" "}
             <Link
-              href="/users/sign_up"
+              href="/authors/sign_up"
               className="font-bold cursor-pointer hover:text-blue-700"
             >
               <span>Create One</span>
