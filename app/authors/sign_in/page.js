@@ -23,7 +23,16 @@ const SignIn = () => {
       setMessage("Login successful! Redirecting...");
       router.push("/dashboard/authors/:authorId"); // Adjust this path as needed
     } catch (error) {
-      setMessage(error.response?.data?.message || "Invalid Email or password.");
+      if(!error.response) {
+         return {
+           success: false,
+           message: setError(
+             "Cannot connect to the server. Please try again later."
+           ),
+         };
+      } else {
+        return { success: false, message: setMessage(error.response?.data?.message || "Invalid Email or password.")}
+      }
     } finally {
       setLoading(false);
     }

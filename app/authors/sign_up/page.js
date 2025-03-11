@@ -17,8 +17,17 @@ const signUp = () => {
             await registerAuthor(email, password);
             setMessage("Registration successfully! You can now log in.");
         } catch (error) {
-            setMessage("Registration failed. Try again.");
-        }
+      if(!error.response) {
+         return {
+           success: false,
+           message: setError(
+             "Cannot connect to the server. Please try again later."
+           ),
+         };
+      } else {
+        return { success: false, message: setMessage(error.response?.data?.message || "Registration failed. Try again.")}
+      }
+    } 
     };
 
   return (
