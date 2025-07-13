@@ -233,6 +233,7 @@ export default function Home() {
           className="absolute inset-0 z-10"
           initial={{ opacity: 0, scale: 1.05 }}
           whileInView={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 1.05 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{
             duration: 0.8,
@@ -270,6 +271,7 @@ export default function Home() {
           className="relative z-20 xl:px-4"
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 60 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{
             duration: 0.8,
@@ -282,6 +284,7 @@ export default function Home() {
             <motion.p
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 40 }}
               viewport={{ once: false, amount: 0.4 }}
               transition={{
                 duration: 0.7,
@@ -297,6 +300,7 @@ export default function Home() {
               className="xl:my-5"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 40 }}
               viewport={{ once: false, amount: 0.4 }}
               transition={{
                 duration: 0.7,
@@ -311,6 +315,7 @@ export default function Home() {
             <motion.p
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 40 }}
               viewport={{ once: false, amount: 0.4 }}
               transition={{
                 duration: 0.7,
