@@ -26,8 +26,8 @@ const Footer = ({ hiddenPage }) => {
     pathname.startsWith("/author") || pathname.startsWith("/dashboard");
 
   return (
-    <footer className={`${hiddenPage} bg-[#050A30] w-full`}>
-      <section className="bg-[#050A30] w-full max-w-7xl mx-auto px-4 pt-8 pb-0 flex flex-col gap-8">
+    <footer className={`${hiddenPage} bg-[#000000] w-full`}>
+      <section className="bg-[#000000] w-full max-w-7xl mx-auto px-4 pt-8 pb-0 flex flex-col gap-8">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-8">
           {/* Logo & Socials */}
           <div className="flex flex-col sm:flex-row sm:items-center items-center gap-4 sm:gap-6">
@@ -192,17 +192,17 @@ const Footer = ({ hiddenPage }) => {
         {/* Separator with terms & conditions and privacy & policy links overlayed, responsive */}
         <div className="relative w-full flex items-center justify-center my-2">
           <span className="block h-[2px] w-full bg-[#EF5353]/30 absolute left-0 top-1/2 -translate-y-1/2 z-0"></span>
-          <div className="relative z-10 bg-[#050A30] px-2 sm:px-3 flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-gray-200 text-xs sm:text-sm font-light max-w-full">
+          <div className="relative z-10 px-2 sm:px-3 flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-gray-200 text-xs sm:text-sm font-light max-w-full">
             <Link
               href="/terms&conditions"
-              className="cursor-pointer hover:text-[#EF5353] whitespace-nowrap"
+              className="cursor-pointer text-[#FFFFFF] whitespace-nowrap"
             >
               Terms &amp; Conditions
             </Link>
-            <span className="text-[#EF5353]">|</span>
+            <span className="text-[#FFFFFF]">|</span>
             <Link
               href="/privacy-policies"
-              className="cursor-pointer hover:text-[#EF5353] whitespace-nowrap"
+              className="cursor-pointer text-[#FFFFFF] whitespace-nowrap"
             >
               Privacy &amp; Policy
             </Link>
