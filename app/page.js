@@ -25,7 +25,7 @@ const FeatureCarousel = dynamic(
 export default function Home() {
   return (
     <div className="">
-      <section className="relative bg-black text-white h-[450px] md:h-[500px] xl:h-[600px]">
+      <section className="relative bg-black text-white h-[450px] md:h-[500px] xl:h-[700px]">
         <div className="absolute inset-0">
           <Image
             src="/images/reader-hero.png"
@@ -38,6 +38,8 @@ export default function Home() {
             blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/..."
             className="object-cover h-full w-full"
           />
+          {/* black overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/60"></div>
         </div>
 
         {/* Red Wave Pattern at Bottom */}
@@ -63,7 +65,7 @@ export default function Home() {
               priority
               sizes="140px"
             />
-            <div className="flex justify-center min-h-[32px] lg:min-h-[46px] xl:min-h-[52px]">
+            <div className="flex justify-center min-h-[32px] lg:min-h-[46px] xl:min-h-[52px] px-4 md:px-6 xl:px-8">
               <Link
                 href="/reader/sign_up"
                 className="flex items-center bg-red-600 text-white p-2 md:px-6 md:py-2 rounded-md hover:bg-red-700 transition shadow text-base lg:text-lg"
@@ -105,22 +107,6 @@ export default function Home() {
               Get started
             </Link>
           </motion.div>
-          </div>
-
-          {/* Main headline */}
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Home of Black Fiction Novels
-          </h1>
-
-          {/* Subheadline */}
-          <p className="text-lg md:text-2xl mb-6 leading-relaxed mt-5">
-            Explore the richest collection of black fiction in one app
-          </p>
-
-          {/* CTA Button */}
-          <Link href="/reader/landing/book-store" className="bg-red-600 text-white px-6 py-3 rounded-md shadow-md hover:bg-red-700 transition mt-5">
-            Get started
-          </Link>
         </div>
       </section>
 
@@ -244,34 +230,100 @@ export default function Home() {
 
       <section className="relative bg-black py-8 md:py-10 xl:py-40 overflow-hidden text-center text-white">
         <motion.div
-          className="absolute inset-0 z-10 transform rotateX-12 perspective-1000"
-          initial={{ y: 0, x: 0 }}
-          animate={{
-            y: [0, 10, -10, 0],
-            x: [0, 10, -10, 0],
-          }}
+          className="absolute inset-0 z-10"
+          initial={{ opacity: 0, scale: 1.05 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
+            duration: 0.8,
+            type: "spring",
+            stiffness: 60,
+            damping: 18,
           }}
         >
-          <Image
-            src="/images/readers/onboarding/rotating-red-wave.png"
-            alt="Rotating red wave background"
-            fill
-            className="object-cover opacity-70 border-none outline-none"
-            style={{ border: "none", outline: "none" }}
-          />
+          <motion.div
+            className="w-full h-full"
+            animate={{
+              scale: [1, 1.05, 1],
+              rotate: [0, 2, -2, 0],
+              x: [0, 15, -15, 0],
+              y: [0, 8, -8, 0],
+            }}
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
+              times: [0, 0.33, 0.66, 1],
+            }}
+          >
+            <Image
+              src="/images/readers/onboarding/rotating-red-wave.png"
+              alt="Rotating red wave background"
+              fill
+              className="object-cover opacity-70 border-none outline-none"
+              style={{ border: "none", outline: "none" }}
+            />
+          </motion.div>
         </motion.div>
 
-        <div className="relative z-10 xl:px-4">
+        <motion.div
+          className="relative z-20 xl:px-4"
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{
+            duration: 0.8,
+            type: "spring",
+            stiffness: 60,
+            damping: 18,
+          }}
+        >
           <div className="px-4 text-2xl md:text-3xl lg:text-5xl font-medium md:font-semibold xl:font-semibold leading-10">
-            <p>Feel the Fire of Black storytelling</p>
-            <p className="xl:my-5">where every book is a portal and </p>
-            <p>every word is power</p>
+            <motion.p
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.4 }}
+              transition={{
+                duration: 0.7,
+                delay: 0.1,
+                type: "spring",
+                stiffness: 60,
+                damping: 18,
+              }}
+            >
+              Feel the Fire of Black storytelling
+            </motion.p>
+            <motion.p
+              className="xl:my-5"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.4 }}
+              transition={{
+                duration: 0.7,
+                delay: 0.2,
+                type: "spring",
+                stiffness: 60,
+                damping: 18,
+              }}
+            >
+              where every book is a portal and{" "}
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.4 }}
+              transition={{
+                duration: 0.7,
+                delay: 0.3,
+                type: "spring",
+                stiffness: 60,
+                damping: 18,
+              }}
+            >
+              every word is power
+            </motion.p>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* <section className="pt-8 bg-black py-10 px-4 md:px-12 lg:px-24">
@@ -313,7 +365,7 @@ export default function Home() {
 
       <section className="bg-black text-white py-12 px-4 sm:px-6 md:px-12 lg:px-20">
         <h2 className="text-center text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold mb-8">
-          Get All These Experiences in ITAN
+          Get All These Experiences on ITAN
         </h2>
         <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-12 lg:gap-20">
           <div className="flex-1 w-full flex flex-col justify-center">
@@ -337,7 +389,7 @@ export default function Home() {
             </form>
           </div>
           <div className="flex-1 w-full flex justify-center md:justify-end mt-8 md:mt-0">
-            <div className="flex gap-3 md:gap-4 lg:gap-6 xl:gap-8 max-w-full">
+            <div className="flex gap-3 md:gap-4 xl:gap-6 max-w-full">
               <img
                 src="/images/readers/onboarding/the-color-of-belonging.png"
                 alt="The Color of Belonging"
