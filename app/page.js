@@ -80,7 +80,7 @@ export default function Home() {
         {/* Hero Text & CTA */}
         <div className="relative z-20 flex flex-col items-center text-center h-full px-4 pt-8 md:pt-16">
           <motion.h1
-            className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-3"
+            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-3"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}

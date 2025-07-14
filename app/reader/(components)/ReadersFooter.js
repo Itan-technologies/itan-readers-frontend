@@ -83,17 +83,9 @@ const Footer = ({ hiddenPage }) => {
               </div>
             </div>
             {/* Mobile links */}
-            <div className="flex flex-col items-center sm:hidden mt-3 text-[13px] text-gray-400 gap-2">
+            <div className="flex flex-col items-center sm:hidden mt-3 text-[13px] text-gray-400 gap-2">              
               <Link
-                href="https://itanglobalpublishing.substack.com/"
-                target="_blank"
-                className="cursor-pointer hover:text-[#EF5353]"
-              >
-                Author Resources
-              </Link>
-              <Link
-                href="mailto:support@itan.app"
-                target="_blank"
+                href="#"                
                 aria-label="Contact support via email"
                 className="cursor-pointer hover:text-[#EF5353]"
               >
@@ -114,15 +106,13 @@ const Footer = ({ hiddenPage }) => {
                 Blog
               </Link>
               <Link
-                href="#"
-                target="_blank"
+                href="#"                
                 className="cursor-pointer hover:text-[#EF5353]"
               >
                 Contact
               </Link>
               <Link
-                href="#"
-                target="_blank"
+                href="#"                
                 className="cursor-pointer hover:text-[#EF5353]"
               >
                 Content Policy
@@ -142,14 +132,7 @@ const Footer = ({ hiddenPage }) => {
             </div>
           </div>
           {/* Desktop links */}
-          <div className="hidden sm:grid grid-cols-2 gap-x-6 gap-y-2 text-[13px] text-gray-400 min-w-[250px]">
-            <Link
-              href="https://itanglobalpublishing.substack.com/"
-              target="_blank"
-              className="cursor-pointer hover:text-[#EF5353]"
-            >
-              Author Resources
-            </Link>
+          <div className="hidden sm:grid grid-cols-2 gap-x-6 gap-y-2 text-[13px] text-gray-400 min-w-[250px]">            
             <Link
               href="https://itanglobalpublishing.substack.com/"
               target="_blank"
@@ -158,16 +141,14 @@ const Footer = ({ hiddenPage }) => {
               Blog
             </Link>
             <Link
-              href="mailto:support@itan.app"
-              target="_blank"
+              href="#"              
               aria-label="Contact support via email"
               className="cursor-pointer hover:text-[#EF5353]"
             >
               Help Center
             </Link>
             <Link
-              href="#"
-              target="_blank"
+              href="#"             
               className="cursor-pointer hover:text-[#EF5353]"
             >
               Content Policy
@@ -180,8 +161,7 @@ const Footer = ({ hiddenPage }) => {
               Youtube
             </Link>
             <Link
-              href="#"
-              target="_blank"
+              href="#"              
               className="cursor-pointer hover:text-[#EF5353]"
             >
               Contact
