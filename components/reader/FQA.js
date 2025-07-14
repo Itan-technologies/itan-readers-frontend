@@ -4,7 +4,7 @@ export default function FAQ() {
     {
       question: "What is ITAN?",
       answer:
-        "ITAN is a literary marketplace bringing African fiction to readers worldwide. We curate a wide range of premium, and original Black stories—delivered as ebooks, serials, and immersive audiobooks.",
+        "ITAN is an Afrocentric bookstore and literary marketplace bringing African fiction to readers worldwide. We curate a wide range of premium, and original Black stories—delivered as ebooks, serials, and immersive audiobooks.",
     },
     {
       question: "How do I access ITAN books?",
@@ -29,7 +29,7 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="bg-[#06082C] text-white py-16 px-4 md:px-8">
+    <section className="bg-[#000000] text-white py-16 px-4 md:px-8">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Frequently Asked Questions
@@ -43,7 +43,7 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="flex items-start gap-4 bg-[#0C0F44] p-6 rounded-lg"
+              className="flex items-start gap-4 bg-gradient-to-br from-[#181818] via-[#393939] to-[#232526] p-6 rounded-lg"
             >
               <div className="flex-shrink-0 w-8 h-8 rounded-md bg-gray-400 text-white flex items-center justify-center font-semibold">
                 {index + 1}
