@@ -1,18 +1,20 @@
 "use client";
 
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic';
 
-const PDFBookWithUI = dynamic(
-  () => import("@/components/reader/PDFBookWithUI"),
-  { ssr: false }
-);
+const PdfFlipbook = dynamic(() => import('@/components/PdfFlipbook'), {
+  ssr: false,
+  loading: () => <p>Loading flipbook...</p>,
+});
 
-export default function ReadBookPage() {
-  const pdfUrl = "/CYBERSECURITY.pdf"; // Ensure the file is in /public
+export default function ReadBook3Page() {
+  const pdfUrl = "/CYBERSECURITY.pdf";
 
   return (
-    <div className="my-20">
-      <PDFBookWithUI pdfUrl={pdfUrl} />
+    <div>
+      <h1>Read Book 3</h1>
+      <PdfFlipbook pdfUrl={pdfUrl} />
     </div>
   );
 }
+
