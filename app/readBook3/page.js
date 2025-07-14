@@ -1,5 +1,6 @@
-// pages/index.js (or app/page.jsx for App Router)
-import PdfFlipbook from "@/components/PdfFlipbook";
+const PdfFlipbook = dynamic(() => import("@/components/PdfFlipbook"), {
+  ssr: false, // disables SSR for this component
+});
 
 export default function HomePage() {
   const pdfExampleUrl = "/CYBERSECURITY.pdf"; // Place your PDF in the public folder
