@@ -1,14 +1,20 @@
-const PdfFlipbook = dynamic(() => import("@/components/PdfFlipbook"), {
-  ssr: false, // disables SSR for this component
+"use client";
+
+import dynamic from 'next/dynamic';
+
+const PdfFlipbook = dynamic(() => import('@/components/PdfFlipbook'), {
+  ssr: false,
+  loading: () => <p>Loading flipbook...</p>,
 });
 
-export default function HomePage() {
-  const pdfExampleUrl = "/CYBERSECURITY.pdf"; // Place your PDF in the public folder
+export default function ReadBook3Page() {
+  const pdfUrl = "/CYBERSECURITY.pdf";
 
   return (
     <div>
-      <h1>My Interactive PDF Flipbook</h1>
-      <PdfFlipbook pdfUrl={pdfExampleUrl} />
+      <h1>Read Book 3</h1>
+      <PdfFlipbook pdfUrl={pdfUrl} />
     </div>
   );
 }
+
