@@ -16,7 +16,7 @@ export default function Layout({ children }) {
   // const signInPage = pathname.endsWith("/reader/sign_in");
   // const termsPage = pathname.endsWith("/terms&conditions");
   // const privacyPolicy = pathname.endsWith("/privacy-policies");
-  const showFooter = pathname === "/" || pathname.endsWith("/bookstore");
+  const showFooter = pathname === "/" || pathname.endsWith("/bookstore") ? "" : "hidden";
 
   // const hideRegPage =
   //   signUpPage || signInPage || termsPage || privacyPolicy ? "hidden" : "";
